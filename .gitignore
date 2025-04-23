@@ -1,0 +1,10 @@
+venv/
+.venv/
+env/
+.env/
+*/venv/
+*/.venv
+*/env/
+*/env
+pyven/
+.env
