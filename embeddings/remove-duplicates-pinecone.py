@@ -1,10 +1,14 @@
 import argparse
 from pinecone import Pinecone
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Pinecone Configuration
-PINECONE_API_KEY = 'pcsk_3XHB47_21JyzLBJpKLgBNawrov6nkJ6EXYkFkQfvTp2D2RBmwPYQXj9qkV55cFLYGB5bx5'
-PINECONE_INDEX_NAME = 'news-articles-index'
+PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
+PINECONE_INDEX_NAME = os.getenv('PINECONE_INDEX_NAME')
 
 def connect_to_pinecone(index_name=None):
     """Connect to Pinecone and return the index."""
